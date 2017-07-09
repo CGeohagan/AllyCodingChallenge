@@ -1,0 +1,52 @@
+/*      HEADER 
+ ********************/
+
+
+
+.piggy-icon {
+	width: 40px;
+	height: 35px;
+}
+
+.site-header {
+	background-color: $blue;
+}
+
+
+.main-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.logo {
+	align-items: center;
+	display: flex;
+
+	&__text {
+		font-size: 24.5px;
+		margin: 0 5px;
+		text-transform: uppercase;
+	}
+}
+
+.main-nav {
+
+	ul {
+		display: flex;
+		align-items: center;
+	}
+
+	a {
+		display: block;
+		color: white;
+		padding: 16px 18px;
+		text-transform: lowercase;
+	}
+
+	a.active {
+		background-color: $med-blue;
+	}
+	
+}
+

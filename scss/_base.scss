@@ -1,0 +1,103 @@
+/*    BASE
+ **************/
+
+
+
+/* General Text */
+
+body, input, textarea {
+	color: $text;
+	font-family: $stack-san-serif;
+	font-size: $small;
+}
+
+p {
+	line-height: 1.5;
+}
+
+
+
+/* Headings */
+
+h1, h2 {
+	font-weight: 400;
+}
+
+h1 {
+	color: $purple;
+	font-size: $xlarge;
+}
+
+h2 {
+	font-size: $large;
+}
+
+h3,
+h4 {
+	font-size: $medium;
+	font-weight: 700;
+}
+
+
+/* Text elements */
+
+ul, ol {
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	font-size: $small;
+}
+
+
+/* Links */
+
+a, 
+button {
+	color: $link;
+	text-decoration: none;
+	cursor: pointer;
+	&:focus,
+	&:active,
+	&:hover {
+		color: $hover;
+	}
+}
+
+
+
+/* Images */
+
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+	width: 100%;
+}
+
+
+
+/* Clearfix */
+
+.clearfix {
+	@include clearfix
+}
+
+
+
+/* Text meant only for screen readers. */
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	      white-space: nowrap;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+

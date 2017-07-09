@@ -1,0 +1,44 @@
+/*   STATES
+ **************/
+
+
+
+/* General Hover States */
+
+a {
+	@include transition(color)
+	&:hover,
+	&:active,
+	&:focus {
+		color: $hover;
+	}
+}
+
+svg {
+	@include transition(transform)
+	&:hover,
+	&:active,
+	&:focus {
+		color: $hover;
+	}
+}
+
+button {
+	@include transition(background-color)
+	@include transition(color)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
