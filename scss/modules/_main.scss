@@ -67,7 +67,7 @@
 }
 
 .rates {
-	margin: 45px 0;
+	margin: 45px 0 75px;
 
 	h2 {
 
@@ -79,5 +79,27 @@
 		}
 
 	}
+
+	&__header {
+		display: flex;
+		font-size: $xsmall;
+		justify-content: space-between;
+		margin-left: 46%;
+		text-align: right;
+		width: 54%;
+	}
+
+	.note {
+		font-size: $xsmall;
+		text-align: right;
+	}
+}
+
+.login {
+	background-color: $purple;
+	color: $white;
+	font-weight: 700;
+	padding: 8px;
+	width: 100%;
 }
 

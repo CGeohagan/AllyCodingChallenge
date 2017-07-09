@@ -12,18 +12,12 @@
 	background-color: $blue;
 }
 
-
-.main-header {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
 .logo {
 	align-items: center;
 	display: flex;
 
 	&__text {
+		color: $dark-blue;	
 		font-size: 24.5px;
 		margin: 0 5px;
 		text-transform: uppercase;
@@ -31,11 +25,6 @@
 }
 
 .main-nav {
-
-	ul {
-		display: flex;
-		align-items: center;
-	}
 
 	a {
 		display: block;

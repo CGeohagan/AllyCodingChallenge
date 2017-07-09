@@ -1,6 +1,21 @@
 /*   FOOTER
  **************/
+
+.footer {
+	background-color: $light-grey;
+	padding-bottom: 48px
+}
  
+.footer-nav {
+	
+	a {
+		display: block;
+		padding: 16px 18px;
+		text-transform: lowercase;
+	}
 
+	a.active {
+		font-weight: 700;
+	}
 
-
+}

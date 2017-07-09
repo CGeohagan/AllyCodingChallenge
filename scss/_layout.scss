@@ -12,6 +12,14 @@ html {
     margin: 0 10%;
 }
 
+.row {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
 
 /* Grid Layout */
 

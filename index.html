@@ -12,13 +12,13 @@
 	<body>
 			<a href="#main" class="screen-reader-text">Skip to main content</a>
 			<header class="site-header" role="banner">
-				<div class="wrapper main-header">
+				<div class="wrapper row">
 					<div class=logo>
 						<img src="assets/images/piggy.png" alt="piggy bank icon" class="piggy-icon">
 						<p class="logo__text">Urbank</p>
 					</div>
 					<nav class="main-nav">
-						<ul>
+						<ul class="row">
 							<li><a href="#">Home</a></li>
 							<li><a href="#">Employee</a></li>
 							<li><a href="#" class="active">Company</a></li>
@@ -52,16 +52,16 @@
 						<div class="rates__table">
 							<header class="rates__header">
 								<p>Annual Percentage Yield</p>
-								<p>Est. Earnings for 1 Year</p>
+								<p>Est. Earnings for 1 Year*</p>
 							</header>
 							<ul class="rates__list">
 							</ul>
-							<span class="note">*Based on $50,000 deposit.</span>
+							<p class="note">*Based on $50,000 deposit.</p>
 						</div>
 					</section>
 				</main>
 				<aside class="sidebar clearfix">
-					<button>Login</button>
+					<button class="login">Login</button>
 					<div class="news__header">News</div>
 					<div class="archive__header">Archive</div>
 					<section class="news__content">
@@ -91,18 +91,20 @@
 				</aside>
 			</div>			
 			<footer class="footer" role="contentinfo">
-				<div class="copyright">
-					&copy; 2014 URBank
+				<div class="wrapper row">
+					<div class="copyright">
+						<a href="#">&copy; 2014 URBank</a>
+					</div>
+					<nav class="footer-nav">
+						<ul class="row">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Employee</a></li>
+							<li><a href="#" class="active">Company</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
 				</div>
-				<nav class="footer-nav">
-					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Employee</a></li>
-						<li><a href="#">Company</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">Contact</a></li>
-					</ul>
-				</nav>
 			</footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script src="assets/js/app.js"></script>
