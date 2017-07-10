@@ -9,9 +9,11 @@ jQuery(document).ready(function($){
 
 	$.getJSON( "assets/code-test.json", function( data ) {
 	  var ratesObject = JSON.stringify(data);
+
+	  console.log(ratesObject);
 	});
 
-	console.log(ratesObject);
+	
 
 
 
