@@ -105,6 +105,7 @@
 	
 	&__content {
 		margin-top: 20px;
+		position: relative;
 	}
 
 	&__buttons {
@@ -118,7 +119,13 @@
 		border-right: $med-grey 1px solid;
 		border-bottom: $med-grey 1px solid;
 		color: $blue;
-		padding: 10px;
+		padding: 12px;
+		position: relative;
+		z-index: 10;
+
+		&:hover {
+			color: $white;
+		}
 	}
 
 	&__button.active {
@@ -127,5 +134,31 @@
 		color: $grey;
 		padding-top: 16px;
 	}
+
+	&__section {
+		background-color: $light-grey;
+		border-top: $med-grey 1px solid;
+		display: none;
+		left: 0;
+		padding: 25px 12px;
+		position: absolute;
+		top: 43px;
+		width: 100%;
+		z-index: 1;
+	}
+
+	&__section.active {
+		display: block;
+	}
+
+	&__entry {
+		margin-bottom: 20px;
+	}
+
+	h4 {
+		color: $blue;
+		margin: 8px 0;
+	}
+
 }
 
