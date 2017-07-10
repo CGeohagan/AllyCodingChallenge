@@ -1,22 +1,12 @@
 /*   MAIN 
  ************/
 
-#main,
-.sidebar {
-	float: left;
-}
 
-#main {
-	width: 74%;
-}
 
-.sidebar {
-	width: 23%;
-	margin-left: 2%;
-}
+/* Intro Styles */
 
 .content {
-	margin-top: 65px;
+	margin-top: 60px;
 }
 
 .intro {
@@ -66,6 +56,10 @@
 	}
 }
 
+
+
+/* Rates Styles */
+
 .rates {
 	margin: 45px 0 75px;
 
@@ -95,11 +89,43 @@
 	}
 }
 
+
+
+/* Sidebar Styles */
+
 .login {
 	background-color: $purple;
 	color: $white;
 	font-weight: 700;
 	padding: 8px;
 	width: 100%;
+}
+
+.sidebar {
+	
+	&__content {
+		margin-top: 20px;
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: flex-end;
+	}
+	
+	&__button {
+		background-color: $green;
+		border-top: $med-grey 1px solid;
+		border-right: $med-grey 1px solid;
+		border-bottom: $med-grey 1px solid;
+		color: $blue;
+		padding: 10px;
+	}
+
+	&__button.active {
+		background-color: $light-grey;
+		border-bottom: none;
+		color: $grey;
+		padding-top: 16px;
+	}
 }
 
