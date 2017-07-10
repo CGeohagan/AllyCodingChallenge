@@ -10,14 +10,16 @@ jQuery(document).ready(function($){
 	$.getJSON( "assets/code-test.json", function( data ) {
 	  var ratesObject = JSON.stringify(data);
 	  var ratesList = document.querySelector('.rates__list');
-	  ratesObject.forEach(function(element) {
+
+	  for (var i=0; i < ratesObject.length; i++) {
 	  	var li = document.createElement('li');
-	  	var name = element.name;
-	  	var apy = element.apy;
-	  	var earnings = element.earnings;
+	  	var name = ratesObject[i].name;
+	  	var apy = ratesObject[i].apy;
+	  	var earnings = ratesObject[i].earnings;
+	  	console.log(name, apy, earnings);
 	  	li.innerHTML = '<p>' + name + '</p><p>' + apy + '</p><p>' + earnings + '</p>';
 	  	ratesList.appendChild(li);
-	  });
+	  }
 
 	  console.log(ratesObject);
 	});
