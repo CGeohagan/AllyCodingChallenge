@@ -7,23 +7,28 @@ jQuery(document).ready(function($){
 
 	// Use JSON File to make a rates table list
 
-	$.getJSON( "assets/code-test.json", function( data ) {
-	  var ratesObject = JSON.stringify(data);
-	  var ratesList = document.querySelector('.rates__list');
 
-	  for (var i=0; i < ratesObject.length; i++) {
-	  	var li = document.createElement('li');
-	  	var name = ratesObject[i].name;
-	  	var apy = ratesObject[i].apy;
-	  	var earnings = ratesObject[i].earnings;
-	  	console.log(name, apy, earnings);
-	  	li.innerHTML = '<p>' + name + '</p><p>' + apy + '</p><p>' + earnings + '</p>';
-	  	ratesList.appendChild(li);
-	  }
-
-	  console.log(ratesObject);
+  $.ajax({
+    url: "assets/code-test.json",
+    //force to handle it as text
+    dataType: "text",
+    success: function(data) {
+        
+        //data downloaded so we call parseJSON function 
+        //and pass downloaded data
+        var json = $.parseJSON(data);
+        var ratesList = document.querySelector('.rates__list');
+        //now json variable contains data in json format
+        for (var i = 0; i < json.length; i++) {
+			  	var li = document.createElement('li');
+			  	var name = json[i].name;
+			  	var apy = json[i].apy;
+			  	var earnings = json[i].earnings;
+			  	li.innerHTML = '<p>' + name + '</p><p>' + apy + '</p><p>' + earnings + '</p>';
+			  	ratesList.appendChild(li);
+			  }
+    }
 	});
-
 	
 
 
