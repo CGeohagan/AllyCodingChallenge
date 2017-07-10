@@ -9,6 +9,15 @@ jQuery(document).ready(function($){
 
 	$.getJSON( "assets/code-test.json", function( data ) {
 	  var ratesObject = JSON.stringify(data);
+	  var ratesList = document.querySelector('.rates__list');
+	  ratesObject.forEach(function(element) {
+	  	var li = document.createElement('li');
+	  	var name = element.name;
+	  	var apy = element.apy;
+	  	var earnings = element.earnings;
+	  	li.innerHTML = '<p>' + name + '</p><p>' + apy + '</p><p>' + earnings + '</p>';
+	  	ratesList.appendChild(li);
+	  });
 
 	  console.log(ratesObject);
 	});
