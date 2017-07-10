@@ -162,3 +162,53 @@
 
 }
 
+
+
+/* Login Modal */
+
+.login-modal {
+	background-color: $white;
+	border: $grey 1px solid;
+	top: 140px;
+	left: 30%;
+	padding: 25px;
+	position: fixed;
+	width: 40%;
+	z-index: 1000;
+
+	h3 {
+		margin-bottom: 20px;
+	}
+
+	.login {
+		width: 50%;
+		margin-left: 50%;
+	}
+
+	.exit-button {
+		background: none;
+		color: $grey;
+		font-size: $medium;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1001;
+	}
+}
+
+.login-wrapper {
+	position: relative;
+}
+
+.input-wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin: 1em 0;
+	width: 100%;
+
+	input {
+		outline: $grey 1px solid;
+		padding: 4px;
+		width: 60%;
+	}
+}

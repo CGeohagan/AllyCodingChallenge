@@ -3,43 +3,78 @@ jQuery(document).ready(function($){
 	
 
 
-/* JSON File Scripts */
+	/* JSON File Scripts */
 
-// Use JSON File to make a rates table list
+	// Use JSON File to make a rates table list
 
-// $.getJSON( "assets/js/code-test.json", function( data ) {
-//   var ratesObject = JSON.stringify(data);
-// });
+	// $.getJSON( "assets/js/code-test.json", function( data ) {
+	//   var ratesObject = JSON.stringify(data);
+	// });
 
-// console.log(ratesObject);
+	// console.log(ratesObject);
 
 
 
-/* Sidebar Toggle Scripts */
+	/* Sidebar Toggle Scripts */
 
-var sidebar = document.querySelector('.sidebar');
-var sidebarButtons = document.querySelectorAll('.sidebar__button');
-var sidebarSections = document.querySelectorAll('.sidebar__section');
+	var sidebar = document.querySelector('.sidebar');
+	var sidebarButtons = document.querySelectorAll('.sidebar__button');
+	var sidebarSections = document.querySelectorAll('.sidebar__section');
+	var body = document.querySelector('body');
 
-// Add click listener to the sidebar
-sidebar.addEventListener("click", function(e) {
-	// e.target is the clicked element
-	// If the clicked item contains the sidebar button class
-	if (e.target && e.target.classList.contains('sidebar__button')) {
+	// Add click listener to the sidebar
+	sidebar.addEventListener("click", function(e) {
+		// e.target is the clicked element
 
-		// Toggle the active class for the sidebar buttons
-		sidebarButtons.forEach(function(item){
-			item.classList.toggle('active');
-		});
+		// If the clicked item contains the sidebar button class
+		if (e.target && e.target.classList.contains('sidebar__button')) {
 
-		// Toggle the active class for the sidebar sections
-		sidebarSections.forEach(function(item){
-			item.classList.toggle('active');
-		});
-		
-	}			
-});
+			// Toggle the active class for the sidebar buttons
+			sidebarButtons.forEach(function(item){
+				item.classList.toggle('active');
+			});
 
+			// Toggle the active class for the sidebar sections
+			sidebarSections.forEach(function(item){
+				item.classList.toggle('active');
+			});
+			
+		}
+
+		// If the clicked item is the login button		
+		if (e.target && e.target.classList.contains('login')) {
+
+			// Create the login div element form
+			var loginDiv = document.createElement('div');
+			loginDiv.className = 'login-modal';
+			var loginWrapper = document.createElement('div');
+			loginWrapper.className = 'login-wrapper';		
+			loginWrapper.innerHTML = '<h3>Sign In to Your Account</h3><div class="input-wrapper"><label>Name</label><input type="text"></div><div class="input-wrapper"><label>Password</label><input type="password"></div><button class="login">Login</button>';
+			
+			// Add on the exit button	and the wrapper div
+			loginWrapper.appendChild(exitButton);
+			loginDiv.appendChild(loginWrapper);					
+			
+			console.log(loginDiv);
+
+			// Add the element to the page		
+			body.classList.add('shaded');	
+			body.appendChild(loginDiv);
+
+		}
+
+	});
+
+	// Exit Button Scripts
+
+	var exitButton = document.createElement('button');
+	exitButton.textContent = 'X';
+	exitButton.className = 'exit-button';
+
+	exitButton.addEventListener("click", function() {
+		body.classList.remove('shaded');	
+		$('.login-modal').remove();
+	});
 
 	
 });
