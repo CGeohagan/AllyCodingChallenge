@@ -16,7 +16,6 @@ jQuery(document).ready(function($){
 	
 
 
-
 	/* Sidebar Toggle Scripts */
 
 	var sidebar = document.querySelector('.sidebar');
