@@ -85,18 +85,23 @@
 
 	&__list {
 		display: flex;
-		justify-content: space-between;
+		flex-direction: column;	
 		padding: 10px;
 
-		&:nth-child(odd) {
+		li {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		li:nth-child(odd) {
 			background-color: $light-green;
 		}
 
-		&:nth-child(even) {
+		li:nth-child(even) {
 			background-color: $green;
 		}
 
-		&:nth-child(1) {
+		li:nth-child(1) {
 			p {
 				font-weight: 700;
 			}
