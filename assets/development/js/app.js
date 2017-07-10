@@ -7,11 +7,11 @@ jQuery(document).ready(function($){
 
 	// Use JSON File to make a rates table list
 
-	// $.getJSON( "assets/js/code-test.json", function( data ) {
-	//   var ratesObject = JSON.stringify(data);
-	// });
+	$.getJSON( "assets/js/code-test.json", function( data ) {
+	  var ratesObject = JSON.stringify(data);
+	});
 
-	// console.log(ratesObject);
+	console.log(ratesObject);
 
 
 
