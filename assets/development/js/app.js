@@ -7,7 +7,6 @@ jQuery(document).ready(function($){
 
 	// Use JSON File to make a rates table list
 
-
   $.ajax({
     url: "assets/code-test.json",
     //force to handle it as text

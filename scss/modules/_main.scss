@@ -83,6 +83,35 @@
 		width: 54%;
 	}
 
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		padding: 10px;
+
+		&:nth-child(odd) {
+			background-color: $light-green;
+		}
+
+		&:nth-child(even) {
+			background-color: $green;
+		}
+
+		&:nth-child(1) {
+			p {
+				font-weight: 700;
+			}
+		}
+
+		p {
+			width: 33%;
+			text-align: right;
+		}
+
+		p:first-child {
+			text-align: left;
+		}
+	}
+
 	.note {
 		font-size: $xsmall;
 		text-align: right;
