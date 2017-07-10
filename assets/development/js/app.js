@@ -7,7 +7,7 @@ jQuery(document).ready(function($){
 
 	// Use JSON File to make a rates table list
 
-	$.getJSON( "assets/js/code-test.json", function( data ) {
+	$.getJSON( "assets/code-test.json", function( data ) {
 	  var ratesObject = JSON.stringify(data);
 	});
 
